@@ -1,0 +1,23 @@
+<section>
+  <div class="spinner" *ngIf="!isLoaded">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div class="container">
+    <a [routerLink]="['/users', user.id]" *ngFor="let user of users">
+      <app-card
+        [firstName]="user.first_name"
+        [lastName]="user.last_name"
+        [email]="user.email"
+        [avatar]="user.avatar"
+      ></app-card>
+    </a>
+  </div>
+  <div class="paginator">
+    <mat-paginator
+      [length]="total_pages"
+      [pageSize]="1"
+      (page)="paginator.page.next($event)"
+    >
+    </mat-paginator>
+  </div>
+</section>

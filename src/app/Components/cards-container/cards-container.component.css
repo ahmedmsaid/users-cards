@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 5% 0;
+}
+
+section {
+    max-height: fit-content;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginator > * {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.spinner {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
